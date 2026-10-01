@@ -8,6 +8,7 @@ use Drupal\Core\Extension\ModuleHandlerInterface;
 use Drupal\bootstrap_styles\Style\StylePluginManagerInterface;
 use Drupal\Core\Form\FormStateInterface;
 use Drupal\Core\Config\ConfigFactoryInterface;
+use Drupal\bootstrap_styles\Attribute\StylesGroup as StylesGroupAttribute;
 
 /**
  * Provides an StylesGroup plugin manager.
@@ -49,6 +50,7 @@ class StylesGroupManager extends DefaultPluginManager {
       $namespaces,
       $module_handler,
       'Drupal\bootstrap_styles\StylesGroup\StylesGroupPluginInterface',
+      StylesGroupAttribute::class,
       'Drupal\bootstrap_styles\Annotation\StylesGroup'
     );
     $this->alterInfo('bootstrap_styles_info');
